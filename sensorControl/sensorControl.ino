@@ -21,9 +21,12 @@ void setup()
 
 void loop()
 {
-  rc_read_values();
+  rcReadValues();
 
-  signal = (int)(rc_input[0]);
+  signal = (int)(rcInput[0]);
 
   // logic to decide which pin to output on based on PWM signal
+  if (signal < LOW_CUTOFF)
+  {
+  }
 }
