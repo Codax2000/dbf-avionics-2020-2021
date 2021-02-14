@@ -56,7 +56,7 @@ void loop() {
   
   if (rc_values[0] > 1600) { // if PWM signal is high, run LEDs
     // run LED program
-    uint32_t time = micros()
+    uint32_t time = micros();
     int remainder = int(time / 1000000) % 3;
     if (remainder == 0) {
       if (!green_led) {
@@ -101,7 +101,7 @@ void rc_read_and_store_values() {
 // Interrupt service routines go here
 // these update the fields with times, shortened to a generic call so we don't have
 // to deal with callbacks or anything weird
-void calc_ch1() { calc_input(RC_CH1, RC_CH1_INPUT); }
+void calc_ch1() { calc_input(RC_CH1, RC_INPUT); }
 
 
 // generic Interrupt Service Routine
