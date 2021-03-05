@@ -47,6 +47,8 @@ void setup() {
   green_led = false;
   orange_led = false;
   red_led = false;
+
+  Serial.begin(9600);
 }
 
 
@@ -54,6 +56,7 @@ void loop() {
   // read rc values
   rc_read_and_store_values();
   
+  Serial.println(rc_values[0]);
   if (rc_values[0] > 1600) { // if PWM signal is high, run LEDs
     // run LED program
     uint32_t time = micros();
