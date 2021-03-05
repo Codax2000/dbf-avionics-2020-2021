@@ -1,0 +1,6 @@
+{
+    "board": "arduino:avr:uno",
+    "sketch": "sensorControl\\sensorControl.ino",
+    "programmer": "AVR ISP",
+    "port": "COM3"
+}
